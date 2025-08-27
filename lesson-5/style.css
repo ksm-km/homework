@@ -8,6 +8,7 @@
 
 .text-2 {
   text-decoration: line-through;
+  text-align: left;
 }
 
 .text-3 {
@@ -24,4 +25,5 @@
 .text-5 {
   text-decoration: double underline;
   letter-spacing: 5px;
+
 }
