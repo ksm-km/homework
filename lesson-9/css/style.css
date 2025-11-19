@@ -1,0 +1,235 @@
+.wrapper {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.quads {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.quads__quad {
+    width: 200px;
+    height: 200px;
+    background: #757272;
+    border-radius: 5px;
+}
+
+.quads__quad--red {
+    background: linear-gradient(130deg, rgb(252, 67, 67), rgb(215, 106, 47));
+}
+
+.quads__quad--green {
+    background: linear-gradient(130deg, rgb(25, 186, 38), rgb(47, 215, 167));
+}
+
+.quads__quad--blue {
+    background: linear-gradient(130deg, rgb(33, 25, 186), rgb(160, 44, 193));
+}
+
+.area {
+    flex: 1 0 auto;
+    border: 5px dashed #333;
+    height: 800px;
+}
+
+.area__place {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: 900;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    border-radius: 5px;
+    border: 5px dashed #8f8787;
+    color: #8f8787;
+}
+
+/* ================== Выполнение дз ниже =================== */
+
+.quads__quad--red {
+    transform: translateX(644px) translateY(594px);
+}
+
+.quads__quad--green {
+    transform: translateX(405px) translateY(-95px) rotateZ(25deg);
+}
+
+.quads__quad--blue {
+    transform: translateX(835px) translateY(-295px) rotateZ(180deg) scale(2);
+}
+
+
+.elements {
+    margin-top: 50px;
+    height: 200px;
+}
+
+.elements {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.elements::before {
+    content: '';
+    position: absolute;
+    transform: translateX(-62px);
+    width: 50px;
+    height: 50px;
+    border: 4px solid green;
+    border-radius: 100%;
+    background-color: red;
+}
+
+.elements::after {
+    content: '';
+    position: absolute;
+    transform: translateX(10px);
+    width: 50px;
+    height: 50px;
+    border: 4px solid green;
+    border-radius: 100%;
+    background-color: blue;
+}
+
+
+
+.wrapper2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box {
+    background: #3b3a3d;
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7de07d;
+    font-size: 30px;
+}
+
+.box span {
+    opacity: 0;
+}
+
+.box__scale {
+    position: absolute;
+    top: -100px;
+    left: -300px;
+    right: 600px;
+    height: 30px;
+    background: #8e8080;
+}
+
+.box:hover .box__scale {
+    right: -300px;
+}
+
+.box:hover span {
+    opacity: 1;
+}
+
+/* ================== Выполнение дз ниже =================== */
+
+.box span {
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: 0.3s;
+    transition-delay: 0.8s;
+}
+
+.box__scale {
+    transition: right 0.7s 0.1s;
+}
+
+
+
+
+
+.wrapper3 {
+    padding: 50px;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    height: 200px;
+    background-color: #444;
+}
+
+.block {
+    background-color: #fff;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
+
+/* ========================================================= */
+
+.block {
+    animation: move-block 2s .3s infinite alternate,
+    color-block 3s .3s infinite alternate;
+
+    /* animation-name: ; */
+    /* animation-duration: ; */
+    /* animation-iteration-count: infinite; */
+    /* animation-direction: alternate-reverse; */
+    /* animation-delay: ; */
+    /* animation-fill-mode: forwards; */
+    animation-timing-function: linear;
+}
+
+@keyframes move-block {
+    0% {
+        left: 0px;
+    }
+
+    25% {
+        border-radius: 20%;
+    }
+
+    50% {
+        border-radius: 50%;
+    }
+
+    75% {
+        border-radius: 70%;
+}
+
+    100% {
+        left: calc(100% - 200px);
+    }
+}
+@keyframes color-block {
+    0% {
+        background-color: #fff;
+    }
+
+    25% {
+        background-color: #f53030;
+    }
+
+    50% {
+        background-color: #fff;
+    }
+
+    75% {
+        background-color: #7e2727;
+}
+
+    100% {
+        background-color: rgb(247, 109, 109);
+    }
+}
